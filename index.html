@@ -16,13 +16,18 @@
             src="https://avatars0.githubusercontent.com/u/61148232?s=460&u=3758099efbf29c80d027fd22fb0422ed63c1ec6f&v=4"
             alt="Profile Pic">
         <div class="site-header-content">
-            <h1>Hi, I'm Shlok Chavan, 23 years old!</h1>
+            <h1>Hi, I'm Shlok Chavan, <span id="age"></span> years old!</h1>
             <p class="description">I'm a full stack development learner, follow me through my journey with links below!
             </p>
         </div>
         <div class="social-handle">
             <a href="https://github.com/shlokchavan">
                 <i class="fa fa-github"></i>
+            </a>
+            <a href="https://dev.to/shlokchavan">
+                <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Shlok Chavan's DEV Profile"
+                    height="24" width="24">
+
             </a>
             <a href="https://www.linkedin.com/in/shlokchavan/">
                 <i class="fa fa-linkedin"></i>
@@ -32,6 +37,14 @@
             </a>
         </div>
     </header>
+
+    <script>
+        const ageEl = document.querySelector('#age');
+        const currentYear = new Date().getFullYear();
+        const myBirthYear = 1997;
+        const age = parseInt(currentYear - myBirthYear);
+        ageEl.textContent = age;
+    </script>
 
 </body>
 
